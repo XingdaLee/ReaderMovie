@@ -1,7 +1,7 @@
 <!--必须text包裹的才能长按选中-->
 <!--text支持转义 如:\n-->
 <view class="container">
-  <image class="user-avatar" src="/images/girl.png"></image>
+  <image class="user-avatar" src="/images/avatar/girl.png"></image>
   <text class="userName">Hello Sinder</text>
   <view class="moto-container">
     <text class="moto">开启小程序之旅</text>

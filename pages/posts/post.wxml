@@ -1,16 +1,64 @@
 <view>
   <swiper indicator-dots='true' autoplay='true'>
-   <swiper-item>
-      <image src="/images/swiper1.jpg"></image>
+    <swiper-item>
+      <image src="/images/swiper/swiper1.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/swiper2.jpg"></image>
+      <image src="/images/swiper/swiper2.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/swiper3.jpg"></image>
+      <image src="/images/swiper/swiper3.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/swiper4.jpg"></image>
+      <image src="/images/swiper/swiper4.jpg"></image>
     </swiper-item>
   </swiper>
+  <!--1-->
+  <view class="post-container">
+    <view class="post-author-date">
+      <image class="post-author" src="/images/avatar/girl.png"></image>
+      <text class="post-date">2012年12月</text>
+    </view>
+    <text class="post-title">阳澄湖大闸蟹上市啦</text>
+    <image class="post-image" src="/images/post/xie.jpg"></image>
+    <text class="post-content">中华绒螯蟹是一种经济蟹类，又称河蟹、毛蟹、清水蟹、大闸蟹。为中国久负盛名的美食。其螯足用于取食和抗敌，掌部内外缘密生绒毛，绒螯蟹因此而得名。杂食性动物，鱼、虾、螺、蚌、蠕虫、蚯蚓、昆虫及其幼虫等均可作为大闸蟹的动物性饵料。</text>
+    <view class="post-like">
+      <image class="post-like-image" src="../../images/icon/chat.png"></image>
+      <text class="post-like-font">92</text>
+      <image class="post-like-image" src="/images/icon/praise.png"></image>
+      <text class="post-like-font">66</text>
+    </view>
+  </view>
+  <!--2-->
+  <view class="post-container">
+    <view class="post-author-date">
+      <image class="post-author" src="/images/avatar/girl.png"></image>
+      <text class="post-date">2012年12月</text>
+    </view>
+    <text class="post-title">奔驰汽车销售指南</text>
+    <image class="post-image" src="/images/post/car.jpg"></image>
+    <text class="post-content">奔驰，德国汽车品牌，被认为是世界上最成功的高档汽车品牌之一，其完美的技术水平、过硬的质量标准、推陈出新的创新能力、以及一系列经典轿跑车款式令人称道。奔驰三叉星已成为世界上最著名的汽车及品牌标志之一。</text>
+    <view class="post-like">
+      <image class="post-like-image" src="../../images/icon/chat.png"></image>
+      <text class="post-like-font">92</text>
+      <image class="post-like-image" src="/images/icon/praise.png"></image>
+      <text class="post-like-font">66</text>
+    </view>
+  </view>
+  <!--3-->
+    <view class="post-container">
+    <view class="post-author-date">
+      <image class="post-author" src="/images/avatar/girl.png"></image>
+      <text class="post-date">2012年12月</text>
+    </view>
+    <text class="post-title">iphone7使用技巧</text>
+    <image class="post-image" src="/images/post/iphone.jpg"></image>
+    <text class="post-content">iPhone 7是Apple（苹果公司）第10代手机，北京时间2016年9月8日凌晨1点在美国旧金山比尔·格雷厄姆市政礼堂2016年苹果秋季新品发布会上发布。</text>
+    <view class="post-like">
+      <image class="post-like-image" src="../../images/icon/chat.png"></image>
+      <text class="post-like-font">92</text>
+      <image class="post-like-image" src="/images/icon/praise.png"></image>
+      <text class="post-like-font">66</text>
+    </view>
+  </view>
 </view>
