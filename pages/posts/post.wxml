@@ -16,17 +16,17 @@
   <block wx:for="{{post_contentList}}" wx:key="index" wx:for-item="list">
     <view class="post-container">
       <view class="post-author-date">
-        <image wx:if="{{list.isShowAuthor}}" class="post-author" src="{{list.author_image}}"></image>
+        <image wx:if="{{list.isShowAuthor}}" class="post-author" src="{{list.avatar}}"></image>
         <text class="post-date">{{list.date}}</text>
       </view>
       <text class="post-title">{{index + 1 + "、"}}{{list.title}}</text>
-      <image class="post-image" src="{{list.post_image}}"></image>
+      <image class="post-image" src="{{list.imgSrc}}"></image>
       <text class="post-content">{{list.content}}</text>
       <view class="post-like">
         <image class="post-like-image" src="../../images/icon/chat.png"></image>
-        <text class="post-like-font">{{list.collect_num}}</text>
+        <text class="post-like-font">{{list.reading}}</text>
         <image class="post-like-image" src="/images/icon/praise.png"></image>
-        <text class="post-like-font">{{list.view_num}}</text>
+        <text class="post-like-font">{{list.collection}}</text>
       </view>
     </view>
   </block>
