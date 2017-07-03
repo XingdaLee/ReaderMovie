@@ -29,7 +29,7 @@
 
   longtap	手指触摸后，超过350ms再离开
 
-  >8、模板不支持template的js引用。不是模块化而是模板化。页面用import css用@import
+  >8、模板不支持template的js引用。不是模块化而是模板化。页面用import css用@import。template是个占位符，不生成节点，无法添加事件-
 
 ## CSS：
 

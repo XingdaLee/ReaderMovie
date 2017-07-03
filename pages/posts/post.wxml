@@ -15,7 +15,10 @@
     </swiper-item>
   </swiper>
   <block wx:for="{{post_contentList}}" wx:key="index" wx:for-item="list">
-    <!--template-->
-    <template is="postItem" data="{{list,index}}"></template>
+    <!--template是个占位符，不生成节点，无法添加事件-->
+    <!-- data- 开头进行自定义属性-->
+    <view class="classname" catchtap="onPostTapDetail" data-postId = "{{list.postId}}" data-post-name="test">
+      <template is="postItem" data="{{...list,index}}" ></template>
+    </view>
   </block>
 </view>
