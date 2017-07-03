@@ -7,7 +7,7 @@
   "window": {
     "navigationBarBackgroundColor": "#ccc",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "小程序",
+    "navigationBarTitleText": "Hello Sinder",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false

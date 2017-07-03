@@ -29,7 +29,7 @@
 
   longtap	手指触摸后，超过350ms再离开
 
-  >8、模板不支持template的js引用。不是模块化而是模板化。页面用import css用@import。template是个占位符，不生成节点，无法添加事件-
+  >8、模板不支持template的js引用。不是模块化而是模板化。页面用import css用@import。template是个占位符，不生成节点，无法添加事件
 
 ## CSS：
 
@@ -38,4 +38,6 @@
   vertical-align 属性设置元素的垂直对齐方式。如图片的位置
 
   letter-spacing 属性增加或减少字符间的空白（字符间距）。
+
+  z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
 
