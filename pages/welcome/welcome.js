@@ -7,6 +7,7 @@ Page({
   data: {
   
   },
+  // catchtap触发的fuc不会触发父级事件，bindtap会触发
   ontap:function() {
     // 父子关系跳转，最多五级,父页面被隐藏，调用的是onHide
     // wx.navigateTo({

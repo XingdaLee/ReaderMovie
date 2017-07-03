@@ -29,6 +29,8 @@
 
   longtap	手指触摸后，超过350ms再离开
 
+  >8、模板不支持template的js引用。不是模块化而是模板化。页面用import css用@import
+
 ## CSS：
 
   margin:auto; 这个是上右下左的值都是自适应的

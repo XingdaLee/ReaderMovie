@@ -4,6 +4,6 @@
   <image class="user-avatar" src="/images/avatar/girl.png"></image>
   <text class="userName">Hello Sinder</text>
   <view class="moto-container" bindtap="ontap">
-    <text class="moto" catchtap="onTextTap">开启小程序之旅</text>
+    <text class="moto" bindtap="onTextTap">开启小程序之旅</text>
   </view>
 </view>
