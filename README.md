@@ -41,3 +41,15 @@
 
   z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
 
+  opacity 属性设置元素的不透明级别(默认是1)
+
+  经典的居中方式：
+
+    `width: 102rpx;
+    height: 110rpx;
+    position: absolute;
+    left: 50%;
+    margin-left: -51rpx;
+    top:108rpx;
+    opacity: 0.6;`
+

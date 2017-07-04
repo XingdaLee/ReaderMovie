@@ -1,13 +1,14 @@
 <!--post-detail.wxml-->
 <view class="container">
-  <image class="head-image" src="../../../images/post/byd.jpg"></image>
+  <image class="head-image" src="{{postDetailObj.headImgSrc}}"></image>
+  <image class="audio" src="../../../images/post-detail/video.png"></image>
   <view class="author-date">
     <image class="avatar" src="../../../images/avatar/girl.png"></image>
     <text class="author">王珞丹</text>
     <text class="const-text">发表于</text>
     <text class="date">3天前</text>
   </view>
-  <text class="title">英雄联盟好玩吗</text>
+  <text class="title">{{postDetailObj.title}}</text>
   <view class="tool">
     <view class="circle-img">
       <image class="souchang-img" src="../../../images/post-detail/souchang.png"></image>
@@ -15,5 +16,5 @@
     </view>
     <view class="horizon"></view>
   </view>
-  <text class="detail" >文章正文</text>
+  <text class="detail" >{{postDetailObj.detail}}</text>
 </view>

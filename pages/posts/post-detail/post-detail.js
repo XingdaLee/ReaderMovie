@@ -1,4 +1,5 @@
 // post-detail.js
+var postsDetailData = require('../../../data/posts-data.js');
 Page({
 
   /**
@@ -12,7 +13,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // 获取父页面传递过来的id
+    var postId = options.id;
+    var postDetailObj = {};
+    for (var i = 0; i < postsDetailData.post_contentList.length; i++) {
+      var obj =  postsDetailData.post_contentList[i];
+      if (obj.postId == postId) {
+        this.setData({
+          postDetailObj: obj
+        });
+        return
+      }
+    };
+    
   },
 
   /**
