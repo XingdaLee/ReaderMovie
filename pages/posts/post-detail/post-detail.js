@@ -13,7 +13,7 @@ Page({
     return wx.getStorageSync("collected");
   },
   // 缓存收藏
-  tapSetStorage: function () {
+  doTapSetStorage: function () {
     var status = this.poststCollected();
     if (status === '') {
       wx.setStorageSync('collected', true);
@@ -23,8 +23,39 @@ Page({
       this.setData({
         collected: tempStatus
       });
-      console.log(tempStatus + 'sdisdsajkdsajdnadnjaskjnkasndjandjandjask');
+      wx.showToast({
+        title: tempStatus ? '取消收藏成功' : '收藏成功',
+        icon: 'success',
+        duration: 2000
+      });
     };
+  },
+  // modal
+  tapSetStorage: function () {
+    var that = this;
+    wx.showModal({
+      title: '提示',
+      content: '是否收藏文章',
+      confirmColor: 'red',
+      success: function (res) {
+        if (res.confirm) {
+          that.doTapSetStorage();
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    });
+  },
+  onShare:function() {
+    wx.showActionSheet({
+      itemList: ['分享到朋友圈', '分享到微信', '分享到微博'],
+      success: function (res) {
+        console.log(res.tapIndex)
+      },
+      fail: function (res) {
+        console.log(res.errMsg)
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载

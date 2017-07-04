@@ -13,7 +13,7 @@
     <view class="circle-img">
       <image wx:if="{{collected}}" catchtap="tapSetStorage" class="souchang-img" src="../../../images/post-detail/souchang.png"></image>
       <image wx:else catchtap="tapSetStorage" src="../../../images/post-detail/souchang2.png"></image>
-      <image class="share-img" src="../../../images/post-detail/share.png"></image>
+      <image catchtap="onShare" class="share-img" src="../../../images/post-detail/share.png"></image>
     </view>
     <view class="horizon"></view>
   </view>
