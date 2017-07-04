@@ -10,7 +10,8 @@ var post_data = [
     collection: "5236",
     postId: 0,
     detail: "阳澄湖大闸蟹上市啦详情数据阳澄湖大闸蟹上市啦详情数据阳澄湖大闸蟹上市啦详情数据阳澄湖大闸蟹上市啦详情数据",
-    headImgSrc: "../../../images/post/xie.jpg"
+    headImgSrc: "../../../images/post/xie.jpg",
+    collected:true
   },
   {
     isShowAuthor: true,
@@ -23,7 +24,8 @@ var post_data = [
     collection: "5236",
     postId: 1,
     detail: "奔驰汽车销售指南 详情数据 奔驰汽车销售指南 详情数奔驰汽车销售指南 详情数奔驰汽车销售指南 详情数",
-    headImgSrc: "../../../images/post/car.jpg"
+    headImgSrc: "../../../images/post/car.jpg",
+    collected: true
   },
   {
     isShowAuthor: true,
@@ -36,7 +38,8 @@ var post_data = [
     collection: "5236",
     postId: 2,
     detail: "比亚迪唐评测详情数据比亚迪唐评测详情数据比亚迪唐评测详情数据比亚迪唐评测详情数据",
-    headImgSrc: "../../../images/post/byd.jpg"
+    headImgSrc: "../../../images/post/byd.jpg",
+    collected: true
   },
   {
     isShowAuthor: true,
@@ -49,7 +52,8 @@ var post_data = [
     collection: "5236",
     postId: 3,
     detail: "啦啦啦啦啦 详情数据啦啦啦啦啦 详情数据啦啦啦啦啦 详情数据啦啦啦啦啦 详情数据啦啦啦啦啦 详情数据",
-    headImgSrc: "../../../images/post/car.jpg"
+    headImgSrc: "../../../images/post/car.jpg",
+    collected: true
   },
   {
     isShowAuthor: true,
@@ -62,7 +66,8 @@ var post_data = [
     collection: "5236",
     postId: 4,
     detail: "呵呵呵呵呵 详情数据呵呵呵呵呵 详情数据呵呵呵呵呵 详情数据呵呵呵呵呵 详情数据",
-    headImgSrc: "../../../images/post/car.jpg"
+    headImgSrc: "../../../images/post/car.jpg",
+    collected: true
   }
 ];
 module.exports = {
