@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isPlayingMusic: false
   },
   // 获取缓存中的内容
   poststCollected: function () {
@@ -46,7 +46,8 @@ Page({
       }
     });
   },
-  onShare:function() {
+  // 点击分享
+  onShare: function () {
     wx.showActionSheet({
       itemList: ['分享到朋友圈', '分享到微信', '分享到微博'],
       success: function (res) {
@@ -56,6 +57,25 @@ Page({
         console.log(res.errMsg)
       }
     })
+  },
+  // 播放音乐,不能用本地音乐文件，图片也是
+  onMusic: function () {
+    var isPlayingMusic = this.data.isPlayingMusic;
+    if (isPlayingMusic) {
+      wx.pauseBackgroundAudio();
+      this.setData({
+        isPlayingMusic: false
+      });
+    } else {
+      wx.playBackgroundAudio({
+        dataUrl: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46',
+        title: '此时此刻-许巍',
+        coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'
+      });
+      this.setData({
+        isPlayingMusic: true
+      });
+    };
   },
   /**
    * 生命周期函数--监听页面加载
