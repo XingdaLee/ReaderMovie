@@ -93,6 +93,7 @@ Page({
     // 因为下面是写在function中的，this已丢失，必须加that（事件驱动的方式）
     var that = this;
     // 启动的时候全局监听音乐是否播放
+    // 加g_currentMusicPostsId是区别每个新闻音乐的唯一性，防止在A页面播放B页面的音乐
     wx.onBackgroundAudioPlay(function () {
       that.setData({
         isPlayingMusic: true
