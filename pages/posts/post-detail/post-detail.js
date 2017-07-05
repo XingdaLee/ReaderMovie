@@ -1,5 +1,6 @@
 // post-detail.js
 var postsDetailData = require('../../../data/posts-data.js');
+var app = getApp();
 Page({
 
   /**
@@ -88,10 +89,7 @@ Page({
       });
     };
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  setMusicStatus: function (postId) {
     // 因为下面是写在function中的，this已丢失，必须加that（事件驱动的方式）
     var that = this;
     // 启动的时候全局监听音乐是否播放
@@ -99,14 +97,30 @@ Page({
       that.setData({
         isPlayingMusic: true
       });
+      app.globalData.g_isPlsyingMusic = true;
+      app.globalData.g_currentMusicPostsId = postId;
     });
     wx.onBackgroundAudioPause(function () {
       that.setData({
         isPlayingMusic: false
       });
+      app.globalData.g_isPlsyingMusic = false;
+      app.globalData.g_currentMusicPostsId = null;
     })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
     // 获取父页面传递过来的id
     var postId = options.id;
+    //设置全局变量的原因是:防止音乐播放后，返回列表页后，再次点击详情后，音乐的图标没有根据当前播放状态显示正确的图标
+    if (app.globalData.g_isPlsyingMusic && postId == app.globalData.g_currentMusicPostsId) {
+      this.setData({
+        isPlayingMusic: true
+      });
+    };
+    this.setMusicStatus(postId);
     var postDetailObj = {};
     for (var i = 0; i < postsDetailData.post_contentList.length; i++) {
       var obj = postsDetailData.post_contentList[i];
