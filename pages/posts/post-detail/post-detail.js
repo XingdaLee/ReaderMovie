@@ -58,8 +58,19 @@ Page({
       }
     })
   },
+  // 根据PostsId查询到相关的音乐数据
+  searchByPostsId: function (postsId) {
+    for (var i = 0; i < postsDetailData.post_contentList.length; i++) {
+      var obj = postsDetailData.post_contentList[i];
+      if (obj.postId == postsId) {
+        return obj.music;
+      }
+    }
+  },
   // 播放音乐,不能用本地音乐文件，图片也是
-  onMusic: function () {
+  onMusic: function (event) {
+    var postsId = event.currentTarget.dataset.postId;
+    var musicObj = this.searchByPostsId(postsId);
     var isPlayingMusic = this.data.isPlayingMusic;
     if (isPlayingMusic) {
       wx.pauseBackgroundAudio();
@@ -68,9 +79,9 @@ Page({
       });
     } else {
       wx.playBackgroundAudio({
-        dataUrl: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46',
-        title: '此时此刻-许巍',
-        coverImgUrl: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'
+        dataUrl: musicObj.url,
+        title: musicObj.title,
+        coverImgUrl: musicObj
       });
       this.setData({
         isPlayingMusic: true
@@ -81,6 +92,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 因为下面是写在function中的，this已丢失，必须加that（事件驱动的方式）
+    var that = this;
+    // 启动的时候全局监听音乐是否播放
+    wx.onBackgroundAudioPlay(function () {
+      that.setData({
+        isPlayingMusic: true
+      });
+    });
+    wx.onBackgroundAudioPause(function () {
+      that.setData({
+        isPlayingMusic: false
+      });
+    })
     // 获取父页面传递过来的id
     var postId = options.id;
     var postDetailObj = {};
@@ -100,8 +124,8 @@ Page({
             collected: wx.getStorageSync("collected")
           });
         };
+        return
       };
-      return
     };
   },
 

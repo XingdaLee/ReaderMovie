@@ -1,7 +1,7 @@
 <!--post-detail.wxml-->
 <view class="container">
-  <image class="head-image" src="{{postDetailObj.headImgSrc}}"></image>
-  <image catchtap="onMusic" class="audio" src="{{isPlayingMusic?'../../../images/post-detail/music-stop.png':'../../../images/post-detail/music-start.png'}}"></image>
+  <image class="head-image" src="{{isPlayingMusic?postDetailObj.music.coverImg:postDetailObj.headImgSrc}}"></image>
+  <image catchtap="onMusic" data-post-id="{{postDetailObj.postId}}" class="audio" src="{{isPlayingMusic?'../../../images/post-detail/music-stop.png':'../../../images/post-detail/music-start.png'}}"></image>
   <view class="author-date">
     <image class="avatar" src="../../../images/avatar/girl.png"></image>
     <text class="author">王珞丹</text>

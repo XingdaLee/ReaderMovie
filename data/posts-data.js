@@ -11,7 +11,12 @@ var post_data = [
     postId: 0,
     detail: "阳澄湖大闸蟹上市啦详情数据阳澄湖大闸蟹上市啦详情数据阳澄湖大闸蟹上市啦详情数据阳澄湖大闸蟹上市啦详情数据",
     headImgSrc: "../../../images/post/xie.jpg",
-    collected:true
+    collected: true,
+    music: {
+      url: "http://ws.stream.qqmusic.qq.com/C100002I8eGJ28BI17.m4a?fromtag=38",
+      title: "谭咏麟：朋友",
+      coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000004eGsCN3SUheO.jpg?max_age=2592000"
+    }
   },
   {
     isShowAuthor: true,
@@ -25,7 +30,12 @@ var post_data = [
     postId: 1,
     detail: "奔驰汽车销售指南 详情数据 奔驰汽车销售指南 详情数奔驰汽车销售指南 详情数奔驰汽车销售指南 详情数",
     headImgSrc: "../../../images/post/car.jpg",
-    collected: true
+    collected: true,
+    music: {
+      url: "http://ws.stream.qqmusic.qq.com/C100003507bR0gDKBm.m4a?fromtag=38",
+      title: "齐秦，夜夜夜夜",
+      coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000001TEc6V0kjpVC.jpg?max_age=2592000"
+    }
   },
   {
     isShowAuthor: true,
@@ -39,7 +49,12 @@ var post_data = [
     postId: 2,
     detail: "比亚迪唐评测详情数据比亚迪唐评测详情数据比亚迪唐评测详情数据比亚迪唐评测详情数据",
     headImgSrc: "../../../images/post/byd.jpg",
-    collected: true
+    collected: true,
+    music: {
+      url: "http://ws.stream.qqmusic.qq.com/C100003GdCmG4NkEOR.m4a?fromtag=38",
+      title: "李宗盛，鬼迷心窍",
+      coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000002xOmp62kqSic.jpg?max_age=2592000"
+    }
   },
   {
     isShowAuthor: true,
@@ -53,7 +68,12 @@ var post_data = [
     postId: 3,
     detail: "啦啦啦啦啦 详情数据啦啦啦啦啦 详情数据啦啦啦啦啦 详情数据啦啦啦啦啦 详情数据啦啦啦啦啦 详情数据",
     headImgSrc: "../../../images/post/car.jpg",
-    collected: true
+    collected: true,
+    music: {
+      url: "http://ws.stream.qqmusic.qq.com/C100004HLusI2lLjZy.m4a?fromtag=38",
+      title: "万晓利，女儿情",
+      coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000004Wv5BO30pPc0.jpg?max_age=2592000"
+    }
   },
   {
     isShowAuthor: true,
@@ -67,7 +87,12 @@ var post_data = [
     postId: 4,
     detail: "呵呵呵呵呵 详情数据呵呵呵呵呵 详情数据呵呵呵呵呵 详情数据呵呵呵呵呵 详情数据",
     headImgSrc: "../../../images/post/car.jpg",
-    collected: true
+    collected: true,
+    music: {
+      url: "http://ws.stream.qqmusic.qq.com/C100002mWVx72p8Ugp.m4a?fromtag=38",
+      title: "老狼，恋恋风尘",
+      coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000001VaXQX1Z1Imq.jpg?max_age=2592000"
+    }
   }
 ];
 module.exports = {
