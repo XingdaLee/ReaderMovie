@@ -33,7 +33,6 @@
 
   >9、缓存一般建议使用同步的，需要解耦或者根据业务需要的来改为异步
   >10、在公共页面如：template中的image的路径，要使用绝对路径，如：/images/icon/chat.png。不能使用相对路径，如
-  
   ../../../images/post-detail/share.png。因为调用template的页面的层级是不确定的，使用相对路径可能会找不到图片
 
 ## CSS：
