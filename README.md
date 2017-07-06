@@ -44,6 +44,8 @@ reLaunch 可以打开任意页面。
 
 >12、豆瓣API的获取:http://api.douban.com/v2/movie/subject/1764796 subject后面的id，随便点击一个电影直接看url。文档地址：https://developers.douban.com/wiki/?title=movie_v2#subject 只能使用Required Scope为basic的API
 
+>13、// wx.request中header坑:'content-type': 'application/json'改为xml,或者直接指定为'content-type': 'json'
+
 ## CSS：
 
   margin:auto; 这个是上右下左的值都是自适应的
@@ -58,15 +60,18 @@ reLaunch 可以打开任意页面。
 
   经典的居中方式：
 
-    `width: 102rpx;
+    width: 102rpx;
     height: 110rpx;
     position: absolute;
     left: 50%;
     margin-left: -51rpx;
     top:108rpx;
-    opacity: 0.6;`
+    opacity: 0.6;
 
-    /*包裹的元素左右居中*/
-.inner-container {
+  包裹的元素左右居中
+  
+  .inner-container {
+    margin: 0 auto 20rpx;
+  }
   
 

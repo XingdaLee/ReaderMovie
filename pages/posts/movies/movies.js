@@ -12,7 +12,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // header坑:'content-type': 'application/json'改为xml,或者直接指定为'content-type': 'json'
+    wx.request({
+      url: 'http://api.douban.com//v2/movie/top250',
+      data:{},
+      header:{
+        'content-type': 'json'
+      },
+      method:'GET',
+      success: function (res) {
+        console.log(res.data)
+      },
+      fail: function() {
+
+      },
+      complete:function() {
+
+      }
+    })
   },
 
   /**
