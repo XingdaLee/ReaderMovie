@@ -42,6 +42,8 @@ reLaunch 可以打开任意页面。
 页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。
 调用页面路由带的参数可以在目标页面的onLoad中获取。
 
+>12、豆瓣API的获取:http://api.douban.com/v2/movie/subject/1764796 subject后面的id，随便点击一个电影直接看url。文档地址：https://developers.douban.com/wiki/?title=movie_v2#subject 只能使用Required Scope为basic的API
+
 ## CSS：
 
   margin:auto; 这个是上右下左的值都是自适应的
@@ -63,4 +65,8 @@ reLaunch 可以打开任意页面。
     margin-left: -51rpx;
     top:108rpx;
     opacity: 0.6;`
+
+    /*包裹的元素左右居中*/
+.inner-container {
+  
 
