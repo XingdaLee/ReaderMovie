@@ -36,6 +36,12 @@
   >10、在公共页面如：template中的image的路径，要使用绝对路径，如：/images/icon/chat.png。不能使用相对路径，如
   ../../../images/post-detail/share.png。因为调用template的页面的层级是不确定的，使用相对路径可能会找不到图片
 
+  >11、navigateTo, redirectTo 只能打开非 tabBar 页面。
+switchTab 只能打开 tabBar 页面。
+reLaunch 可以打开任意页面。
+页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。
+调用页面路由带的参数可以在目标页面的onLoad中获取。
+
 ## CSS：
 
   margin:auto; 这个是上右下左的值都是自适应的

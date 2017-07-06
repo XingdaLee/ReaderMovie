@@ -1,4 +1,4 @@
-// welcome.js
+// movies.js
 Page({
 
   /**
@@ -7,21 +7,7 @@ Page({
   data: {
   
   },
-  // catchtap触发的fuc不会触发父级事件，bindtap会触发
-  ontap:function() {
-    // 父子关系跳转，最多五级,父页面被隐藏，调用的是onHide
-    // wx.navigateTo({
-    //   url: '../posts/post',
-    // });
-    // 父页面被直接关闭，调用的是onUnload
-    wx.switchTab({
-      url: '../posts/post',
-    });
-    console.log('onTap');
-  },
-  onTextTap:function() {
-    console.log('onTextTap');
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -47,14 +33,14 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log('welcome onHide');
+  
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log('welcome onUnload');
+  
   },
 
   /**
