@@ -17,15 +17,15 @@
 
 会触发冒泡的事件列表：
    
-  touchstart	手指触摸动作开始
+    touchstart	手指触摸动作开始
 
-  touchmove	手指触摸后移动
+    touchmove	手指触摸后移动
 
-  touchcancel	手指触摸动作被打断，如来电提醒，弹窗
+    touchcancel	手指触摸动作被打断，如来电提醒，弹窗
 
-  touchend	手指触摸动作结束
+    touchend	手指触摸动作结束
 
-  tap	手指触摸后马上离开
+    tap	手指触摸后马上离开
 
   longtap	手指触摸后，超过350ms再离开
 
@@ -69,7 +69,7 @@ reLaunch 可以打开任意页面。
     opacity: 0.6;
 
   包裹的元素左右居中
-  
+
   .inner-container {
     margin: 0 auto 20rpx;
   }
