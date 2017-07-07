@@ -2,7 +2,8 @@ App({
   // 自定义了一个全局变量globalDta
   globalData: {
     g_isPlsyingMusic: false,
-    g_currentMusicPostsId: null
+    g_currentMusicPostsId: null,
+    g_doubanBase:"http://api.douban.com/"
   },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）

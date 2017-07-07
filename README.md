@@ -46,6 +46,7 @@ reLaunch 可以打开任意页面。
 
 >13、// wx.request中header坑:'content-type': 'application/json'改为xml,或者直接指定为'content-type': 'json'
 
+
 ## CSS：
 
   margin:auto; 这个是上右下左的值都是自适应的
@@ -73,5 +74,7 @@ reLaunch 可以打开任意页面。
   .inner-container {
     margin: 0 auto 20rpx;
   }
+  
+  数字一般颜色#666 #333
   
 
