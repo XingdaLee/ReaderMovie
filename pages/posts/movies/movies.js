@@ -1,4 +1,5 @@
 // movies.js
+var utils = require("../../../utils/util.js");
 var app = getApp();
 Page({
 
@@ -17,10 +18,13 @@ Page({
       var tempObj = {};
       if (subject.title.length > 6) {
         tempObj.title = subject.title.substring(0, 6) + "...";
+      } else {
+        tempObj.title = subject.title;
       };
       tempObj.average = subject.rating.average;
       tempObj.coverageUrl = subject.images.large;
       tempObj.movieId = subject.id;
+      tempObj.stars = utils.covertToStarsArray(subject.rating.stars);
       movies.push(tempObj);
     };
     // 把数据封装成每个对象里都有个movies，在模板传递数据的时候使用...展开，可以让下面的模板以movies为数据源进行渲染

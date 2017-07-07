@@ -44,7 +44,7 @@ reLaunch 可以打开任意页面。
 
 >12、豆瓣API的获取:http://api.douban.com/v2/movie/subject/1764796 subject后面的id，随便点击一个电影直接看url。文档地址：https://developers.douban.com/wiki/?title=movie_v2#subject 只能使用Required Scope为basic的API
 
->13、// wx.request中header坑:'content-type': 'application/json'改为xml,或者直接指定为'content-type': 'json'
+>13、wx.request中header坑:'content-type': 'application/json'改为xml,或者直接指定为'content-type': 'json'
 
 
 ## CSS：
