@@ -11,6 +11,28 @@ function covertToStarsArray(stars) {
   };
   return starsList;
 };
+// http请求,异步方法必须加callBack
+// params是请求时带的参数,类型是Obj
+function http(url, params, callBack) {
+  wx.request({
+    url: url,
+    data: params,
+    header: {
+      'content-type': 'json'
+    },
+    method: 'GET',
+    success: function (res) {
+      callBack(res.data)
+    },
+    fail: function () {
+
+    },
+    complete: function () {
+
+    }
+  });
+};
 module.exports = {
-  covertToStarsArray: covertToStarsArray
+  covertToStarsArray: covertToStarsArray,
+  http: http
 }

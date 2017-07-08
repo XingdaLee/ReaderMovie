@@ -46,7 +46,7 @@ reLaunch 可以打开任意页面。
 
 >13、wx.request中header坑:'content-type': 'application/json'改为xml,或者直接指定为'content-type': 'json'
 
-
+>14、四种数据传递方式:全局变量 本地缓存 URL 类似于angular的广播事件传递
 ## CSS：
 
   margin:auto; 这个是上右下左的值都是自适应的

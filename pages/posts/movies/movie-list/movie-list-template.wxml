@@ -3,8 +3,9 @@
   <view class="movie-list-container">
     <view class="inner-container">
       <view class="movie-head">
-        <text class="slogan">正在热映</text>
-        <view class="more">
+        <text class="slogan">{{categoryTitle}}</text>
+        <view class="more" catchtap="onMoreMovie" 
+        data-category="{{categoryTitle}}" data-urlParams="{{urlParams}}">
           <text class="more-text">更多</text>
           <image class="more-img" src="/images/movie/arrow-right.png"></image>
         </view>

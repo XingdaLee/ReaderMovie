@@ -7,10 +7,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    inTheaters: {},
-    comingSoon: {},
+    in_theaters: {},
+    coming_soon: {},
     top250: {}
   },
+  // 点击更多将参数传递给more-movies
+  onMoreMovie: function (event) {
+    var category = event.currentTarget.dataset.category;
+    var urlparams = event.currentTarget.dataset.urlparams;
+    wx.navigateTo({
+      url: 'more-movie/more-movie?category=' + category + '&urlparams=' + urlparams
+    })
+  },
+  // 封装豆瓣参数
   processDoubanData: function (respData, settingKey) {
     var movies = [];
     for (var idx in respData.subjects) {
@@ -30,7 +39,9 @@ Page({
     // 把数据封装成每个对象里都有个movies，在模板传递数据的时候使用...展开，可以让下面的模板以movies为数据源进行渲染
     var readData = {};
     readData[settingKey] = {
-      movies: movies
+      movies: movies,
+      categoryTitle: respData.title,
+      urlParams: settingKey
     };
     this.setData(readData);
   },
@@ -69,8 +80,8 @@ Page({
     var comingSoonUrl = app.globalData.g_doubanBase + "v2/movie/coming_soon";
     // top250
     var top250Url = app.globalData.g_doubanBase + "v2/movie/top250";
-    this.getMovieListData(inTheatersUrl, "inTheaters");
-    this.getMovieListData(comingSoonUrl, "comingSoon");
+    this.getMovieListData(inTheatersUrl, "in_theaters");
+    this.getMovieListData(comingSoonUrl, "coming_soon");
     this.getMovieListData(top250Url, "top250");
   },
 
